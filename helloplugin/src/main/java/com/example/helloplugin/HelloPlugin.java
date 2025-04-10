@@ -4,12 +4,16 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.plugin.java.JavaPlugin;
 import com.example.dayplugin.DayPlugin;
+import com.example.multicmd.ByeCommand;
+import com.example.multicmd.HelloCommand;
 
 public class HelloPlugin extends JavaPlugin {
 
     @Override
     public void onEnable() {
         getLogger().info("HelloPlugin 플러그인이 활성화되었습니다!");
+        getCommand("hello").setExecutor(new HelloCommand());
+        getCommand("bye").setExecutor(new ByeCommand());
         getCommand("day").setExecutor(new DayPlugin());
     }
 

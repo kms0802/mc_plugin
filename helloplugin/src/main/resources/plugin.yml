@@ -11,3 +11,5 @@ commands:
     description: 작별 인사
   day:
     description: 오늘도 좋은 하루 보내세요.
+  bye:
+    description: 작별메시지2
